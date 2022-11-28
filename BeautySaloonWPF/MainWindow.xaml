@@ -6,24 +6,17 @@
         xmlns:local="clr-namespace:BeautySaloonWPF"
         mc:Ignorable="d"
         Title="Салон красоты" Height="450" Width="800">
+   
+
     <Grid>
-        <ListView HorizontalAlignment="Center" Name="MainListView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Image Source="{Binding CategoryImage}"/>
-                        <TextBlock Text="{Binding CategoryTitle}"/>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top"></StackPanel>
-                </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
-        </ListView> 
+       
+
+        <Frame x:Name="MainFrame"></Frame>
     </Grid>
     
+
+
+        
     
     
 </Window>

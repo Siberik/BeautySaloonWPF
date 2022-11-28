@@ -1,6 +1,4 @@
-﻿using BeautySaloonWPF.Controllers;
-using BeautySaloonWPF.View.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BeautySaloonWPF
+namespace BeautySaloonWPF.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для MainPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainPage : Page
     {
-        public MainWindow()
+        public MainPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new AuthorizationPage());
-            //MainListView.ItemsSource = ServiceCategoryesController.GetServiceCategoryes();
         }
     }
 }
