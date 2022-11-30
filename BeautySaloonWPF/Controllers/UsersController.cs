@@ -11,6 +11,18 @@ namespace BeautySaloonWPF.Controllers
 {
    public static class UsersController
     {
+        /// <summary>
+        /// Авторизация пользователя
+        /// </summary>
+        /// <param name="login">
+        /// Логин пользователя
+        /// </param>
+        /// <param name="password">
+        /// Пароль пользователя
+        /// </param>
+        /// <returns>
+        /// Аунтификация пользователя
+        /// </returns>
         public static bool Auth(string login,string password)
 
         {
@@ -19,6 +31,28 @@ namespace BeautySaloonWPF.Controllers
             {
                 HttpResponseMessage response = client.GetAsync($"{Manager.RootUrl}Users/{login}/{password}").Result;
                 
+                return response.IsSuccessStatusCode;
+
+            }
+
+        }
+        /// <summary>
+        /// Регистрация пользователя
+        /// </summary>
+        /// <param name="user">
+        /// На вход приходят данные пользователя
+        /// </param>
+        /// <returns>
+        /// Регистрация пользователя
+        /// </returns>
+        public static bool AddUser(Users user)
+
+        {
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = client.PostAsync($"{Manager.RootUrl}Users",null).Result;
+
                 return response.IsSuccessStatusCode;
 
             }

@@ -8,17 +8,17 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AuthorizationPage">
 
-    <Grid>
-        <StackPanel>
-            <TextBlock>Логин</TextBlock>
+    <Grid Background="BlueViolet">
+        <StackPanel Width="400" VerticalAlignment="Center">
+            <TextBlock Background="Gold">Логин</TextBlock>
             <TextBox x:Name="LoginTextBox" TabIndex="0" >
             </TextBox>
-            <TextBlock>Пароль</TextBlock>
+            <TextBlock Background="Gold">Пароль</TextBlock>
             <PasswordBox x:Name="PasswordPasswordBox" TabIndex="1" ></PasswordBox>
 
-            <Button x:Name="SignInbutton" TabIndex="2" Click="SignInbuttonClick"  ></Button>
+            <Button x:Name="SignInbutton" TabIndex="2" Click="SignInbuttonClick"  Height="30" Background="Goldenrod" Margin="10" Content="Авторизация"></Button>
 
-            <Button x:Name="RegButton" TabIndex="3" IsTabStop="True" ></Button>
+            <Button x:Name="RegButton" TabIndex="3" IsTabStop="True" Height="30" Background="Goldenrod" Margin="10" Content="Регистрация" Click="RegButtonClick"></Button>
         </StackPanel>
     </Grid>
 </Page>

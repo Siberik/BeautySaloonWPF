@@ -37,5 +37,10 @@ namespace BeautySaloonWPF.View.Pages
                 MessageBox.Show("Вход не выполнен");
             }
         }
+
+        private void RegButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new RegistrationPage());
+        }
     }
 }
