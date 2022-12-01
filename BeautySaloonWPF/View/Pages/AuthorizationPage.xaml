@@ -9,7 +9,8 @@
       Title="AuthorizationPage">
 
     <Grid Background="BlueViolet">
-        <StackPanel Width="400" VerticalAlignment="Center">
+        
+        <StackPanel Width="400">
             <TextBlock Background="Gold">Логин</TextBlock>
             <TextBox x:Name="LoginTextBox" TabIndex="0" >
             </TextBox>

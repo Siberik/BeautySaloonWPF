@@ -26,7 +26,10 @@ namespace BeautySaloonWPF
         {
             InitializeComponent();
             MainFrame.Navigate(new AuthorizationPage());
-            //MainListView.ItemsSource = ServiceCategoryesController.GetServiceCategoryes();
+
         }
+
+
     }
-}
+    }
+

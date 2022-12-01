@@ -1,5 +1,4 @@
-﻿using BeautySaloonWPF.Controllers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,14 +16,13 @@ using System.Windows.Shapes;
 namespace BeautySaloonWPF.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainPage.xaml
+    /// Логика взаимодействия для CategoryPage.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class CategoryPage : Page
     {
-        public MainPage()
+        public CategoryPage()
         {
             InitializeComponent();
-            MainListView.ItemsSource = ServiceCategoryesController.GetServiceCategoryes();
         }
     }
 }

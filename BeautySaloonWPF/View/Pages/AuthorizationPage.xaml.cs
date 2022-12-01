@@ -31,6 +31,7 @@ namespace BeautySaloonWPF.View.Pages
             if (UsersController.Auth(LoginTextBox.Text,PasswordPasswordBox.Password))
             {
                 MessageBox.Show("Вход выполнен");
+                this.NavigationService.Navigate(new MainPage());
             }
             else
             {

@@ -29,8 +29,10 @@ namespace BeautySaloonWPF.Controllers
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = client.GetAsync($"{Manager.RootUrl}Users/{login}/{password}").Result;
-                
+                string strQuery = $"{Manager.RootUrl}Users/{login}/{password}";
+                Console.WriteLine(strQuery);
+                HttpResponseMessage response = client.GetAsync(strQuery).Result;
+               
                 return response.IsSuccessStatusCode;
 
             }
@@ -48,14 +50,19 @@ namespace BeautySaloonWPF.Controllers
         public static bool AddUser(Users user)
 
         {
+          
+                string jsonStr=JsonConvert.SerializeObject(user);
+                var buffer=System.Text.Encoding.UTF8.GetBytes(jsonStr);
+                var byteContent=new ByteArrayContent(buffer);
+                byteContent.Headers.ContentType= new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                using(HttpClient client =new HttpClient())
+                    {
+                string strQuery = $"{Manager.RootUrl}Users";
+                HttpResponseMessage response=client.PostAsync(strQuery, byteContent).Result;
+                    return response.IsSuccessStatusCode;
+                        }
 
-            using (HttpClient client = new HttpClient())
-            {
-                HttpResponseMessage response = client.PostAsync($"{Manager.RootUrl}Users",null).Result;
-
-                return response.IsSuccessStatusCode;
-
-            }
+            
 
         }
     }

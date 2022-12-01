@@ -30,19 +30,21 @@ namespace BeautySaloonWPF.View.Pages
         private void RegistrationButtonClick(object sender, RoutedEventArgs e)
         {
             
-                Users user = new Users
+                Users newUser = new Users
                 {
-                    IdRole = 1,
-                    UserLogin = "Володя",
-                    UserLastName = "s",
-                    UserOtherName = "Абобович",
-                    UserName = "biba",
-                    UserPassword = "assaas1",
-                    IdroleNavigation=
+                    IdRole = 2,
+                    UserLogin = NameTextBox.Text,
+                    UserLastName = LastNameTextBox.Text,
+                    UserOtherName = OtherNamaTextBox.Text,
+                    UserName = LoginTextBox.Text,
+                    UserPassword = PasswordPasswordBox.Password,
+                    
                 };
-            
-            
-            UsersController.AddUser(user);
+            if(UsersController.AddUser(newUser))
+            {
+            MessageBox.Show("Вы успешно зарегестрировались");
+            }
+            UsersController.AddUser(newUser);
         }
     }
 }

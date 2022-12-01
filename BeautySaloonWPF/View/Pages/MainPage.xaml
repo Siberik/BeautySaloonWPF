@@ -9,7 +9,7 @@
       Title="MainPage">
 
     <Grid>
-
+        
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="Back_Button"  Opacity="0.8"  Content="Назад"></Button>
             <Button x:Name="LogOutButton" Opacity="0.8" Content="Выйти" ></Button>
@@ -17,9 +17,9 @@
         <ListView HorizontalAlignment="Center" Name="MainListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <Image Source="{Binding CategoryImage}"/>
-                        <TextBlock Text="{Binding CategoryTitle}"/>
+                    <Grid Width="300" Height="300">
+                        <Image Source="{Binding CategoryImage}" />
+                        <TextBlock Text="{Binding CategoryTitle}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

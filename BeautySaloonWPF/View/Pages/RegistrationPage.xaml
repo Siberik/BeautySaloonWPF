@@ -35,7 +35,9 @@
         </Style>
 
     </Page.Resources>
-    <Grid>
+    
+    <Grid Background="BlueViolet">
+        
         <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Width="200" VerticalAlignment="Center">
                 <TextBlock Style="{StaticResource HeaderTextBlock}">Регистрация</TextBlock>
