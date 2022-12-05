@@ -10,7 +10,8 @@
 
     <Grid Background="BlueViolet">
         
-        <StackPanel Width="400">
+        <StackPanel Width="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Background="Gold" Margin="6">АВТОРИЗАЦИЯ:</TextBlock>
             <TextBlock Background="Gold">Логин</TextBlock>
             <TextBox x:Name="LoginTextBox" TabIndex="0" >
             </TextBox>

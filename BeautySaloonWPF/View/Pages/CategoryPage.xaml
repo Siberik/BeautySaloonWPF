@@ -40,7 +40,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <!--Здесь выводится информация об услугах по категориям-->
+                        
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

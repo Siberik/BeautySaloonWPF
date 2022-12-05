@@ -26,5 +26,12 @@ namespace BeautySaloonWPF.View.Pages
             InitializeComponent();
             MainListView.ItemsSource = ServiceCategoryesController.GetServiceCategoryes();
         }
+
+        private void CategoryButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new CategoryPage());
+        }
     }
-}
+
+   
+    }
