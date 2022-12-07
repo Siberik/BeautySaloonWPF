@@ -57,10 +57,11 @@
             </StackPanel>
             <StackPanel Style="{StaticResource StackPanelCaptha}" >
                 <TextBlock>Введите символы с картинки:</TextBlock>
+                <TextBlock x:Name="CaptchaTextBlock"/>
 
                 <StackPanel x:Name="CapchaStackPanel" Orientation="Horizontal" HorizontalAlignment="Center"></StackPanel>
-                <TextBox x:Name="WriteCaothaTextBox"></TextBox>
-                <Button x:Name="CaptchaButton" >Обновить Captcha</Button>
+                <TextBox x:Name="WriteCapthaTextBox"></TextBox>
+                <Button x:Name="CaptchaButton"  Click="CaptchaButtonClick">Обновить Captcha</Button>
             </StackPanel>
         </DockPanel>
 
