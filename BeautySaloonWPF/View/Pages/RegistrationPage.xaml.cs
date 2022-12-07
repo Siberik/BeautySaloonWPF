@@ -31,7 +31,9 @@ namespace BeautySaloonWPF.View.Pages
             CaptchaTextBlock.FontSize = rnd.Next(14,30);
             CaptchaTextBlock.Width = rnd.Next(50,100);
             CaptchaTextBlock.Height = rnd.Next(40, 100);
-           CaptchaTextBlock.Foreground= new SolidColorBrush(Color.FromRgb((byte)rnd.Next(1, 255),
+            CaptchaTextBlock.Background = new SolidColorBrush(Color.FromRgb((byte)rnd.Next(1, 255),
+                 (byte)rnd.Next(1, 255), (byte)rnd.Next(1, 233)));
+            CaptchaTextBlock.Foreground= new SolidColorBrush(Color.FromRgb((byte)rnd.Next(1, 255),
                   (byte)rnd.Next(1, 255), (byte)rnd.Next(1, 233)));
         }
 
@@ -76,6 +78,8 @@ namespace BeautySaloonWPF.View.Pages
             CaptchaTextBlock.Width = rnd.Next(50, 100);
             CaptchaTextBlock.Height = rnd.Next(40, 100);
             CaptchaTextBlock.Opacity = rnd.Next(50, 90);
+            CaptchaTextBlock.Background = new SolidColorBrush(Color.FromRgb((byte)rnd.Next(1, 255),
+                 (byte)rnd.Next(1, 255), (byte)rnd.Next(1, 233)));
             CaptchaTextBlock.Foreground = new SolidColorBrush(Color.FromRgb((byte)rnd.Next(1, 255),
                  (byte)rnd.Next(1, 255), (byte)rnd.Next(1, 233)));
             
