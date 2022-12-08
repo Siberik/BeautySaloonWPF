@@ -36,11 +36,13 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock x:Name="Title_TextBlock"></TextBlock>
-        <ListView x:Name="ServiceList_View" Grid.Row="1" VerticalAlignment="Center">
+        <ListView x:Name="ServiceListView" Grid.Row="1" VerticalAlignment="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        
+                        <TextBlock x:Name="ServicesTextBox" Text="{Binding Title}"></TextBlock>
+                        <Image x:Name="ServicesImage" Source="{Binding ServicePhotos}"></Image>
+
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

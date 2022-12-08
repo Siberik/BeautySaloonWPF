@@ -18,9 +18,16 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Width="300" Height="200" >
-                        
-                             <Button x:Name="CategoryButton" Content="{Binding CategoryImage}" Click="CategoryButtonClick"/>
-                        <TextBlock Text="{Binding CategoryTitle}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFF440" Background="BlueViolet"/>
+
+                        <Button x:Name="CategoryButton" Click="CategoryButtonClick">
+                            <Button.Content >
+                                <Grid>
+                                    <Image Source="{Binding CategoryImage}"/>
+                                    <TextBlock Text="{Binding CategoryTitle}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFF440" Background="BlueViolet"/>
+                                </Grid>
+                            </Button.Content>
+                        </Button>
+                       
                        
                        
                     </Grid>
