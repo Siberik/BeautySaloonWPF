@@ -21,10 +21,17 @@ namespace BeautySaloonWPF.View.Pages
     /// </summary>
     public partial class CategoryPage : Page
     {
-        public CategoryPage()
+        
+	public CategoryPage()
         {
             InitializeComponent();
-            ServiceListView.ItemsSource = ServicesController.GetService();
+            ServiceListView.ItemsSource = ServicesController.GetCategoryService();
+        }
+private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
-}
+    
+    }
+

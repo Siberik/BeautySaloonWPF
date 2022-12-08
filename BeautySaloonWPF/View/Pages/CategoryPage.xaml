@@ -39,7 +39,7 @@
         <ListView x:Name="ServiceListView" Grid.Row="1" VerticalAlignment="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
                         <TextBlock x:Name="ServicesTextBox" Text="{Binding Title}"></TextBlock>
                         <Image x:Name="ServicesImage" Source="{Binding ServicePhotos}"></Image>
 
