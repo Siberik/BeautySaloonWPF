@@ -1,4 +1,5 @@
 ﻿using BeautySaloonWPF.Controllers;
+using BeautySaloonWPF.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,14 +23,20 @@ namespace BeautySaloonWPF.View.Pages
     public partial class CategoryPage : Page
     {
         
-	public CategoryPage()
+	public CategoryPage(ServiceCategoryes activeServiceCategory)
         {
             InitializeComponent();
-            ServiceListView.ItemsSource = ServicesController.GetCategoryService();
+            ServiceListView.ItemsSource = ServicesController.GetCategoryService(activeServiceCategory.CategoryId);
+            TitleTextBlock.Text = activeServiceCategory.CategoryTitle;
         }
 private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
 
+        }
+
+        private void PrewPageButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new MainPage());
         }
     }
     

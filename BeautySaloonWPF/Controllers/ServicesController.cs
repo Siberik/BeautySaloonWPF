@@ -1,6 +1,7 @@
 ﻿using BeautySaloonWPF.Models;
 using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -15,7 +16,7 @@ namespace BeautySaloonWPF.Controllers
         /// <summary>
         /// Вывод всех сервисов
         /// </summary>
-        /// <returns></returns>
+      
       
         public static List<Services> GetService()
 
@@ -31,18 +32,19 @@ namespace BeautySaloonWPF.Controllers
             }
 
         }
+
+
+
         /// <summary>
         /// Вывод всех сервисов заданной категории
         /// </summary>
-        /// <returns></returns>
-
-        public static List<Services> GetCategoryService(int CategoryId)
+        public static List<Services> GetCategoryService(int categoryId)
 
         {
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = client.GetAsync($"{Manager.RootUrl}Services/{CategoryId}").Result;
+                HttpResponseMessage response = client.GetAsync($"{Manager.RootUrl}Services/{categoryId}").Result;
                 var content = response.Content.ReadAsStringAsync();
                 var answer = JsonConvert.DeserializeObject<List<Services>>(content.Result);
                 return answer;

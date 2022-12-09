@@ -1,4 +1,5 @@
 ﻿using BeautySaloonWPF.Controllers;
+using BeautySaloonWPF.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,10 +27,25 @@ namespace BeautySaloonWPF.View.Pages
             InitializeComponent();
             MainListView.ItemsSource = ServiceCategoryesController.GetServiceCategoryes();
         }
-
-        private void CategoryButtonClick(object sender, RoutedEventArgs e)
+       
+        /// <summary>
+        /// Выбор категории
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GridPreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.NavigationService.Navigate(new CategoryPage());
+            //определяем по кому кликнули
+            Grid categoryButton = sender as Grid;
+            //определяем строку из таблицы ServiceCategoryes, связанную с выбранным элементом
+            ServiceCategoryes activeServiceCategory =categoryButton.DataContext as ServiceCategoryes;
+          
+            this.NavigationService.Navigate(new CategoryPage(activeServiceCategory));
+        }
+
+        private void LogOutButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new AuthorizationPage());
         }
     }
 

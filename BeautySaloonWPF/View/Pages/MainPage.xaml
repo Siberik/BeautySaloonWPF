@@ -8,18 +8,22 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage">
 
+    
     <Grid>
-        
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="Back_Button"  Opacity="0.8"  Content="Назад"></Button>
-            <Button x:Name="LogOutButton" Opacity="0.8" Content="Выйти" ></Button>
+            <Button x:Name="LogOutButton" Opacity="0.8" Content="Выйти"  Click="LogOutButtonClick" Foreground="White" Background="DarkGoldenrod"></Button>
         </StackPanel>
-        <ListView HorizontalAlignment="Center" Name="MainListView" Background="BlueViolet">
+        <ListView HorizontalAlignment="Center" Name="MainListView" Background="BlueViolet" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="300" Height="200" >
+                    <Grid Width="300" Height="200"  PreviewMouseDown="GridPreviewMouseDown">
 
-                        <Button x:Name="CategoryButton" Click="CategoryButtonClick">
+                        <Button x:Name="CategoryButton" >
                             <Button.Content >
                                 <Grid>
                                     <Image Source="{Binding CategoryImage}"/>

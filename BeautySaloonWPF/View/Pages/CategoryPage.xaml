@@ -35,7 +35,13 @@
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="Title_TextBlock"></TextBlock>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="TitleTextBlock"></TextBlock>
+        <Button x:Name="PrewPageButton" Width="100" Height="40" Content="Назад" HorizontalAlignment="Right" Click="PrewPageButtonClick" Background="Bisque" Grid.Column="1"/>
         <ListView x:Name="ServiceListView" Grid.Row="1" VerticalAlignment="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -49,26 +55,29 @@
         </ListView>
         <Grid HorizontalAlignment="Right" Grid.RowSpan="2"  Width="0" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"></RowDefinition>
-                <RowDefinition Height="5*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
-                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="45*"></RowDefinition>
+                <RowDefinition Height="131*"></RowDefinition>
+                <RowDefinition Height="61*"/>
+                <RowDefinition Height="34*"/>
+                <RowDefinition Height="45*"></RowDefinition>
+                <RowDefinition Height="45*"></RowDefinition>
+                <RowDefinition Height="45*"></RowDefinition>
+                <RowDefinition Height="45*"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock >Запись</TextBlock>
-            <Calendar x:Name="CalendarRecord"  Grid.Row="1" >
+            <TextBlock Margin="-41,5"  >Запись</TextBlock>
+            <Calendar x:Name="CalendarRecord"  Grid.Row="1" Grid.RowSpan="3" >
             </Calendar>
-            <DockPanel Grid.Row="2">
+            <DockPanel Grid.Row="4">
                 <TextBlock FontSize="15" >Дата:</TextBlock>
                 <TextBox x:Name="EnterDate_TextBox"  IsReadOnly="True" ></TextBox>
             </DockPanel>
-            <DockPanel Grid.Row="3">
+            <DockPanel Grid.Row="5">
                 <TextBlock FontSize="15">Время:</TextBlock>
                 <TextBox x:Name="EnterTime_TextBox" ></TextBox>
             </DockPanel>
-            <Button x:Name="Record_Button" Grid.Row="4" Style="{StaticResource Button_Record_Close}" Foreground="White"   Content="Записать"></Button>
-            <Button x:Name="Record_Close"  Grid.Row="5" Style="{StaticResource Button_Record_Close}" Foreground="Black" Background="Gray" Content="Закрыть"  ></Button>
+            <Button x:Name="Record_Button" Grid.Row="6" Style="{StaticResource Button_Record_Close}" Foreground="White"   Content="Записать"  Grid.RowSpan="2" Margin="0,0,-180,0"></Button>
+            <Button x:Name="Record_Close"  Grid.Row="7" Style="{StaticResource Button_
+                Record_Close}" Foreground="Black" Background="Gray" Content="Закрыть" Margin="0,0,-180,-5"  ></Button>
         </Grid>
     </Grid>
 </Page>
