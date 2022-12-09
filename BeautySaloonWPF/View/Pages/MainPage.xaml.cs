@@ -40,7 +40,7 @@ namespace BeautySaloonWPF.View.Pages
             //определяем строку из таблицы ServiceCategoryes, связанную с выбранным элементом
             ServiceCategoryes activeServiceCategory =categoryButton.DataContext as ServiceCategoryes;
             Services activeCost = categoryButton.DataContext as Services;
-            this.NavigationService.Navigate(new CategoryPage(activeServiceCategory, activeCost));
+            this.NavigationService.Navigate(new CategoryPage(activeServiceCategory));
            
         }
 
