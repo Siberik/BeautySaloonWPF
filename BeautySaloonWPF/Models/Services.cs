@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BeautySaloonWPF.Models
 {
-   public class Services
+   public partial class Services
     {
 
         [JsonProperty("id")]
@@ -18,6 +18,9 @@ namespace BeautySaloonWPF.Models
 
         [JsonProperty("cost")]
         public float Cost { get; set; }
+        public float CostWithDiscont { get {
+                return Cost-(Cost * (Discount/100));
+            } }
         
         [JsonProperty("durationInSeconds")]
         public int DurationInSeconds { get; set; }

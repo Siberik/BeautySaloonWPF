@@ -52,6 +52,10 @@ namespace BeautySaloonWPF.Controllers
             }
 
         }
+      
+
+
+
         //http://127.0.0.1:55409/api/Services/4
     }
 }

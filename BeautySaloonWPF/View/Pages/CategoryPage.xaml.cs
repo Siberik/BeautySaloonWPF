@@ -25,11 +25,14 @@ namespace BeautySaloonWPF.View.Pages
         
 	public CategoryPage(ServiceCategoryes activeServiceCategory)
         {
+            
             InitializeComponent();
             ServiceListView.ItemsSource = ServicesController.GetCategoryService(activeServiceCategory.CategoryId);
+          
             TitleTextBlock.Text = activeServiceCategory.CategoryTitle;
+             
         }
-private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+private void GridMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
 
         }

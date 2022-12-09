@@ -39,8 +39,9 @@ namespace BeautySaloonWPF.View.Pages
             Grid categoryButton = sender as Grid;
             //определяем строку из таблицы ServiceCategoryes, связанную с выбранным элементом
             ServiceCategoryes activeServiceCategory =categoryButton.DataContext as ServiceCategoryes;
-          
-            this.NavigationService.Navigate(new CategoryPage(activeServiceCategory));
+            Services activeCost = categoryButton.DataContext as Services;
+            this.NavigationService.Navigate(new CategoryPage(activeServiceCategory, activeCost));
+           
         }
 
         private void LogOutButtonClick(object sender, RoutedEventArgs e)
